@@ -48,8 +48,16 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Послуги</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Товари</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Товари
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Окуляри</a>
+                    <a class="dropdown-item" href="#">Медтехніка</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Футляри</a>
+                </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Локації</a>
@@ -57,11 +65,11 @@
         </ul>
         <div class="navbar-nav ml-auto">
             <c:if test="${empty sessionScope.user}">
-                <a href="${pageContext.request.contextPath}/pages/login.jsp">Увійти</a>
+                <a href="${pageContext.request.contextPath}/login">Увійти</a>
             </c:if>
             <c:if test="${empty sessionScope.user == false}">
-                <a href="${pageContext.request.contextPath}/pages/profile.jsp">Профіль</a>
-                <a style="margin-left: 10px" href="${pageContext.request.contextPath}/pages/logout.jsp">Вийти</a>
+                <a href="${pageContext.request.contextPath}/profile">Профіль</a>
+                <a style="margin-left: 10px" href="${pageContext.request.contextPath}/logout">Вийти</a>
             </c:if>
         </div>
     </div>
