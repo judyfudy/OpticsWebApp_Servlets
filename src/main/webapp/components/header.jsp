@@ -64,6 +64,10 @@
             <li class="nav-item">
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><b>bubniyo@gmail.com</b></a>
             </li>
+            <li class="nav-item">
+                <a href="https://instagram.com/dan4oooos"><i class="fa fa-instagram" style="margin-left: 700px; margin-top: 12px"></i></a>
+                <a href="https://www.facebook.com/bubnsy"><i class="fa fa-facebook" style="margin-left: 5px;"></i></a>
+            </li>
         </ul>
         <div class="navbar-nav ml-auto">
             <c:if test="${empty sessionScope.user}">
