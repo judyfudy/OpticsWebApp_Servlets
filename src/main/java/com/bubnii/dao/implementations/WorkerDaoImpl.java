@@ -28,11 +28,12 @@ public class WorkerDaoImpl implements WorkerDao {
                 Worker worker = new Worker();
                 worker.setId(rs.getInt("id"));
                 worker.setAge(rs.getInt("age"));
-                worker.setExperience(rs.getInt("experience"));
+                worker.setEmail(rs.getString("email"));
                 worker.setFirstName(rs.getString("first_name"));
                 worker.setLastName(rs.getString("last_name"));
                 worker.setMiddleName(rs.getString("middle_name"));
                 worker.setPhoto(rs.getString("photo_url"));
+                worker.setDescription(rs.getString("description"));
                 workers.add(worker);
             }
         } catch (SQLException | NamingException e) {

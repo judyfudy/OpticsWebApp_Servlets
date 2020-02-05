@@ -6,11 +6,15 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Реєстрація</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
     <link href="<c:url value="/css/registration.css"/>" rel="stylesheet" type="text/css">
+
     <script
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
     </script>
@@ -29,8 +33,8 @@
         <div class="signin">
             <button type="submit" class="registerbtn">Зареєструватись</button>
             <p>
-                <br>
-                Вже зареєстровані ? <a href="<c:url value="/pages/login.jsp"/>">Увійти</a>.
+            <div class="divider"></div>
+            Вже зареєстровані ? <a href="<c:url value="/pages/login.jsp"/>">Увійти</a>.
             </p>
         </div>
     </div>
@@ -43,7 +47,7 @@
         var password = document.getElementById("password").value;
         var passwordConfirm = document.getElementById("passwordConfirm").value;
 
-        if(password !== passwordConfirm){
+        if (password !== passwordConfirm) {
             alert("Passwords don't match");
             return false;
         }
@@ -66,7 +70,7 @@
             success = false;
 
             if (response.status === 403) {
-                alert("User with this username exists!");
+                alert("КОРИСТУВАЧ З ТАКИМ НІКНЕЙМОМ ВЖЕ ІСНУЄ!");
             }
         });
 

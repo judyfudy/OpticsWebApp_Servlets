@@ -10,98 +10,37 @@
 <html>
 <head>
     <title>footer</title>
-    <link href="<c:url value="/css/footer.css"/>" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="<c:url value="/css/footer.css"/>">
 </head>
 <body>
 <!-- Footer -->
-<footer class="page-footer font-small mdb-color lighten-3 pt-4">
-
-    <hr class="my-4">
-    <!-- Footer Links -->
-    <div class="container text-center text-md-left">
-
-        <!-- Grid row -->
+<footer>
+    <div class="footer">
         <div class="row">
-
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
-
-                <!-- Content -->
-                <h8 class="font-weight-bold text-uppercase mb-4">Footer Content</h8>
-                <p>Here you can use rows and columns to organize your footer content.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident voluptate
-                    esse
-                    quasi, veritatis totam voluptas nostrum.</p>
-
+            <div class="column bg-light">
+                <h4>Адреса</h4>
+                <hr>
+                <p>Україна, Львівська обл.<br>м.Львів, вул.Кульпарківська 117<br>
+                    E-mail: bubniyo@gmail.com</p>
             </div>
-            <!-- Grid column -->
-
-            <hr class="clearfix w-100 d-md-none">
-
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
-
+            <div class="column bg-light">
+                <h4>Телефон</h4>
+                <hr>
+                <p>Тел.факс +38 (05743) 5-44-74 <br>
+                    Тел. +38 (050) 300-80-65, (095) 034-56-54, <br>
+                    (050) 401-89-22, (095) 511-86-94, (050) 193-73-07, <br>
+                    (050) 405-97-25, (097) 839-73-79, (097) 849-42-57,
+                </p>
             </div>
-            <!-- Grid column -->
-
-            <hr class="clearfix w-100 d-md-none">
-
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
-
-                <!-- Contact details -->
-                <h8 class="font-weight-bold text-uppercase">Адреса</h8>
-
-                <ul class="list-unstyled">
-                    <li>
-                        <p>
-                            <i class="fa fa-home" style="padding-bottom: 1px"></i> Україна, м.Львів</p>
-                    </li>
-                    <li>
-                        <p>
-                            <i class="fa fa-envelope" style="padding-bottom: 1px"></i> bubnsy@gmail.com</p>
-                    </li>
-                    <li>
-                        <p>
-                            <i class="fa fa-phone" style="padding-bottom: 1px"></i> 063-352-53-63</p>
-                    </li>
-                </ul>
-
+            <div class="column bg-light">
+                <h4>Графік роботи</h4>
+                <hr>
+                <p><b>Працюємо Пн-Пт</b>: 10:00 до 18:00. <br>
+                    <b>Сб</b>: 10:00 до 16:00. <br>
+                    <b>Нд</b>: Вихідний</p>
             </div>
-            <!-- Grid column -->
-
-            <hr class="clearfix w-100 d-md-none">
-
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
-
-                <!-- Social buttons -->
-                <h8 class="font-weight-bold text-uppercase">Стежте за нами</h8>
-
-                <!-- Facebook -->
-                <a type="button" href="https://www.facebook.com/bubnsy" class="btn-floating btn-facebook mt-2">
-                    <i class="fa fa-facebook"></i>
-                </a>
-
-                <!-- Instagram -->
-                <a type="button" href="https://instagram.com/dan4oooos?igshid=1mirhqd2desgn" class="btn-floating btn-instagram">
-                    <i class="fa fa-instagram"></i>
-                </a>
-
-            </div>
-            <!-- Grid column -->
-
         </div>
-        <!-- Grid row -->
-
     </div>
-    <!-- Footer Links -->
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Всі права захищені
-    </div>
-    <!-- Copyright -->
-
 </footer>
 <!-- Footer -->
 </body>

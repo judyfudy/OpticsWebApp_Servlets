@@ -20,7 +20,7 @@ import java.sql.SQLException;
 public class RegistrationServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("pages/registration.jsp").forward(request,response);
+        request.getRequestDispatcher("pages/registration.jsp").forward(request, response);
     }
 
     @Override
@@ -49,7 +49,7 @@ public class RegistrationServlet extends HttpServlet {
                 HttpSession session = request.getSession();
                 session.setAttribute("user", username);
                 session.setAttribute("userId", person.getIdPerson());
-                System.out.println("successful registrations");
+                System.out.println("УСПІШНО ЗАРЕЄСТРОВАНО");
 
                 response.sendRedirect("/");
             } else {

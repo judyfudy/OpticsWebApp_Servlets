@@ -25,7 +25,6 @@ public class PersonDaoImpl implements PersonDao {
         ResultSet rs = ps.executeQuery();
 
         while (rs.next()) {
-
             person.setIdPerson(rs.getInt("id"));
             person.setUsername(rs.getString("username"));
             person.setPassword(rs.getString("pass"));
@@ -44,7 +43,7 @@ public class PersonDaoImpl implements PersonDao {
 
         String sql = "SELECT * FROM person";
 
-        try(Statement statement = DBConnection.getConnection().createStatement()) {
+        try (Statement statement = DBConnection.getConnection().createStatement()) {
             ResultSet rs = statement.executeQuery(sql);
 
             while (rs.next()) {
@@ -135,4 +134,5 @@ public class PersonDaoImpl implements PersonDao {
 
         return isDeleted;
     }
+
 }

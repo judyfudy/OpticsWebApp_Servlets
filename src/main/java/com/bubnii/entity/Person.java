@@ -12,7 +12,8 @@ public class Person {
     private String lastName;
     private PersonType personType;
 
-    public Person() { }
+    public Person() {
+    }
 
     public Person(int idPerson, String username, String password, String firstName, String lastName, PersonType personType) {
         this.idPerson = idPerson;

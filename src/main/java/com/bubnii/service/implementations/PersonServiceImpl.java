@@ -13,7 +13,7 @@ public class PersonServiceImpl implements PersonService {
     private final PersonDao personDao = new PersonDaoImpl();
 
     @Override
-    public List<Person> getAll() throws SQLException, NamingException {
+    public List<Person> getAll() {
 
         return personDao.getAll();
     }
@@ -47,4 +47,5 @@ public class PersonServiceImpl implements PersonService {
 
         return personDao.getPersonByCredentials(username);
     }
+
 }

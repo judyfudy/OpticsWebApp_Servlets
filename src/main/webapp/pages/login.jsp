@@ -10,15 +10,19 @@
 
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Увійти</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
     <link href="<c:url value="/css/login.css"/>" rel="stylesheet" type="text/css">
+
     <script
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
     </script>
 </head>
+
 <body>
-<form method="post" action="${pageContext.request.contextPath}/index.jsp" onsubmit="return validateCredentials()">
+<form method="post" action="${pageContext.request.contextPath}/home" onsubmit="return validateCredentials()">
     <div class="container mt-3">
         <h1 class="title">Вхід</h1>
         <hr>
@@ -56,9 +60,9 @@
             success = false;
 
             if (response.status === 401) {
-                alert("Invalid password");
+                alert("НЕВІРНИЙ ПАРОЛЬ");
             } else if (response.status === 403) {
-                alert("User with this username doesn't exist. Please, sign up!")
+                alert("КОРИСТУВАЧА З ТАКИМ НІКНЕЙМОМ НЕ ІСНУЄ. БУДЬ ЛАСКА, ЗАРЕЄСТРУЙТЕСЬ!")
             }
         });
 

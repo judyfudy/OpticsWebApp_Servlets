@@ -8,8 +8,17 @@ public class Worker {
     private String lastName;
     private String middleName;
     private int age;
-    private int experience;
+    private String email;
     private String photo;
+    private String description;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public String getPhoto() {
         return photo;
@@ -59,25 +68,12 @@ public class Worker {
         this.age = age;
     }
 
-    public int getExperience() {
-        return experience;
+    public String getEmail() {
+        return email;
     }
 
-    public void setExperience(int experience) {
-        this.experience = experience;
-    }
-
-    @Override
-    public String toString() {
-        return "Worker [" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", middleName='" + middleName + '\'' +
-                ", age=" + age +
-                ", experience=" + experience +
-                ", photo=" + photo +
-                ']';
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override
@@ -94,5 +90,19 @@ public class Worker {
     @Override
     public int hashCode() {
         return Objects.hash(id, firstName, lastName, middleName);
+    }
+
+    @Override
+    public String toString() {
+        return "Worker{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", age=" + age +
+                ", email='" + email + '\'' +
+                ", photo='" + photo + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }
