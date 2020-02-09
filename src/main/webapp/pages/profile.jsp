@@ -26,7 +26,7 @@
                 <small><cite title="Source Title">Lviv, Ukraine  <i class="icon-map-marker"></i></cite></small>
             </blockquote>
             <p>
-                bubniyo@gmail.com <br>
+                ${personInfo.email} <br>
                 April 22, 2001
             </p>
         </div>

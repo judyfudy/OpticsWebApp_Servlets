@@ -42,7 +42,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet"/>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light" id="myTopnav">
+<nav class="navbar navbar-expand-lg navbar-light" id="myTopnav" style="background-color: lightblue">
     <a class="navbar-brand" href="<c:url value="/"/>"><b>ОПТИКА</b></a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -65,7 +65,8 @@
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><b>bubniyo@gmail.com</b></a>
             </li>
             <li class="nav-item">
-                <a href="https://instagram.com/dan4oooos"><i class="fa fa-instagram" style="margin-left: 700px; margin-top: 12px"></i></a>
+                <a href="https://instagram.com/dan4oooos"><i class="fa fa-instagram"
+                                                             style="margin-left: 700px; margin-top: 12px"></i></a>
                 <a href="https://www.facebook.com/bubnsy"><i class="fa fa-facebook" style="margin-left: 5px;"></i></a>
             </li>
         </ul>

@@ -30,6 +30,7 @@ public class PersonDaoImpl implements PersonDao {
             person.setPassword(rs.getString("pass"));
             person.setFirstName(rs.getString("first_name"));
             person.setLastName(rs.getString("last_name"));
+            person.setEmail(rs.getString("email"));
             person.setPersonType(PersonType.USER);
         }
         ps.close();
@@ -53,6 +54,7 @@ public class PersonDaoImpl implements PersonDao {
                 person.setPassword(rs.getString("pass"));
                 person.setFirstName(rs.getString("first_name"));
                 person.setLastName(rs.getString("last_name"));
+                person.setEmail(rs.getString("email"));
                 person.setPersonType(PersonType.valueOf(rs.getString("person_type")));
 
                 personList.add(person);
@@ -65,15 +67,16 @@ public class PersonDaoImpl implements PersonDao {
 
     @Override
     public boolean add(Person person) throws SQLException, NamingException {
-        String sql = "INSERT INTO person(username, pass, first_name, last_name, person_type)"
-                + "VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO person(username, pass, first_name, last_name, email, person_type)"
+                + "VALUES (?, ?, ?, ?, ?, ?)";
 
         PreparedStatement ps = DBConnection.getConnection().prepareStatement(sql);
         ps.setString(1, person.getUsername());
         ps.setString(2, person.getPassword());
         ps.setString(3, person.getFirstName());
         ps.setString(4, person.getLastName());
-        ps.setString(5, "user");
+        ps.setString(5, person.getEmail());
+        ps.setString(6, "user");
 
         boolean isAdded = ps.executeUpdate() > 0;
         ps.close();
@@ -99,6 +102,7 @@ public class PersonDaoImpl implements PersonDao {
             person.setPassword(rs.getString("pass"));
             person.setFirstName(rs.getString("first_name"));
             person.setLastName(rs.getString("last_name"));
+            person.setEmail(rs.getString("email"));
             person.setPersonType(PersonType.USER);
         }
         ps.close();

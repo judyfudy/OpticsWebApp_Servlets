@@ -33,6 +33,7 @@ public class RegistrationServlet extends HttpServlet {
         String passwordToHash = request.getParameter("password");
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
+        String email = request.getParameter("email");
 
         try {
 
@@ -42,7 +43,7 @@ public class RegistrationServlet extends HttpServlet {
 
             if (person.getUsername() == null) {
 
-                person = new Person(username, securePassword, firstName, lastName, PersonType.USER);
+                person = new Person(username, securePassword, firstName, lastName, email, PersonType.USER);
                 personService.add(person);
                 person = personService.getPersonByCredentials(username);
 

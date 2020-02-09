@@ -16,22 +16,22 @@
 <jsp:include page="/components/header.jsp"/>
 <div class="container" style="margin-top: 10px">
     <div class="content">
-        <h1>Про нас</h1>
-        <p style="text-align: center; font-family: 'Courier New',serif ">Ми найбільша українська мережа оптик, де ви можете отримати професійну консультацію лікаря-офтальмолога,
+        <h1 style="font-family: 'Times New Roman',serif" align="center">Про нас</h1>
+        <hr><p style="text-align: center; font-family: 'Times New Roman',serif ">Ми найбільша українська мережа оптик, де ви можете отримати професійну консультацію лікаря-офтальмолога,
             допомогу в підборі і придбанні сучасних і зручних оптичних оправ,
-            виготовлення і ремонт окулярів, гарантійне і післягарантійне обслуговування.</p>
+            виготовлення і ремонт окулярів, гарантійне і післягарантійне обслуговування.</p><hr>
     </div>
-    <img src="<c:url value="/images/glass_on_yellow.jfif"/>" alt="Notebook" style="width:50%;">
+    <img src="<c:url value="/images/glass_on_yellow.jfif"/>" alt="Notebook" style="width:50%; margin-left: 300px">
 </div>
 
-<h3 style="text-align: center">Наші Лікарі</h3><hr>
+<hr><h3 style="text-align: center; font-family: 'Times New Roman',serif">Наші Лікарі</h3><hr>
 <c:forEach items="${workers}" var="worker">
-    <div class="card mt-5 mb-5 ml-5" style="display: inline-block">
+    <div class="card mt-5 mb-5" style="display: inline-block; margin-left: 300px">
         <img src="data:image/jpg;base64,${worker.photo}" alt="" style="width:100%">
-        <h1>${worker.firstName} ${worker.lastName} ${worker.middleName}</h1>
+        <h3>${worker.firstName} ${worker.middleName}</h3>
         <p class="title">Лікар-офтальмолог</p>
-        <p>${worker.email}, age: ${worker.age}</p>
-        <p>${worker.description}</p>
+        <p>${worker.email}, вік: ${worker.age}</p>
+        <p>Опис: ${worker.description}</p>
     </div>
 </c:forEach>
 

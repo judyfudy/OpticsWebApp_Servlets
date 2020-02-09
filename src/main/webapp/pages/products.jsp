@@ -49,20 +49,26 @@
                 typeId: id
             },
             success: function (data) {
-                console.log(data);
-                document.getElementById("productsContainer").innerHTML = '';
+                document.getElementById("productsContainer").innerHTML = "";
                 data.forEach(function (element) {
                     document.getElementById("productsContainer").innerHTML +=
-                        '<div class="card mt-5 ml-5" style="display: inline-block">'
-                        + '<img src="/images/sticker_1.jpg" width="15%" height="15%">' /* + element.photo */
-                        + '<h3>' + element.name + '</h3>' + '<p>' + element.model + '</p>'
-                        + '<p class="price">' + element.price + '$' + '</p>'
-                        + '<p>' + element.description + '</p>' + '<p>' + element.brand + '</p>'
-                        + '<p>' + element.quantity + '</p>' + '<button onclick="addToCart(' + element.id + ')">Add' + '</button>'
+                        ${sessionScope.user == null} ? '<div class="card mt-5 ml-5 mb-5" style="display: inline-block;">'
+                        + '<img src="/images/sticker_1.jpg  " width="100%" height="30%">' /* + element.photo */
+                        + '<p>' + element.name + ' ' + element.brand + ' ' + element.model + '</p>'
+                        + '<p class="price">Ціна: ' + element.price + ' грн.</p>'
+                        + '<p class="small">Кількість:' + element.quantity + '</p>'
+                        + '<a href="/login" class="button">Увійдіть, щоб добавити в корзину</a>'
+                        + '</div>'
+                        :
+                        '<div class="card mt-5 ml-5 mb-5" style="display: inline-block;">'
+                        + '<img src="/images/sticker_1.jpg  " width="100%" height="30%">' /* + element.photo */
+                        + '<p>' + element.name + ' ' + element.brand + ' ' + element.model + '</p>'
+                        + '<p class="price">Ціна: ' + element.price + ' грн.</p>'
+                        + '<p class="small">Кількість:' + element.quantity + '</p>'
+                        + '<button onclick="addToCart(' + element.id + ')">Добавити в корзину' + '</button>'
                         + '</div>';
-                })
+                });
             }
-
         });
     }
 </script>

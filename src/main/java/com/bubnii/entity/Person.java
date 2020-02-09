@@ -10,25 +10,28 @@ public class Person {
     private String password;
     private String firstName;
     private String lastName;
+    private String email;
     private PersonType personType;
 
     public Person() {
     }
 
-    public Person(int idPerson, String username, String password, String firstName, String lastName, PersonType personType) {
+    public Person(int idPerson, String username, String password, String firstName, String lastName, String email, PersonType personType) {
         this.idPerson = idPerson;
         this.username = username;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.email = email;
         this.personType = personType;
     }
 
-    public Person(String username, String password, String firstName, String lastName, PersonType personType) {
+    public Person(String username, String password, String firstName, String lastName, String email, PersonType personType) {
         this.username = username;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.email = email;
         this.personType = personType;
     }
 
@@ -80,6 +83,14 @@ public class Person {
         this.personType = personType;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -94,12 +105,13 @@ public class Person {
                 && password.equals(person.password)
                 && firstName.equals(person.firstName)
                 && lastName.equals(person.lastName)
+                && email.equals(person.email)
                 && personType == person.personType;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idPerson, username, password, firstName, lastName, personType);
+        return Objects.hash(idPerson, username, password, firstName, lastName, email, personType);
     }
 
     @Override
@@ -110,6 +122,7 @@ public class Person {
                 ", password=" + password +
                 ", firstName=" + firstName +
                 ", lastName=" + lastName +
+                ", email=" + email +
                 ", personType=" + personType +
                 ']';
     }

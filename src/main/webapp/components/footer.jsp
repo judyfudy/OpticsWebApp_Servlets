@@ -17,13 +17,13 @@
 <footer>
     <div class="footer">
         <div class="row">
-            <div class="column bg-light">
+            <div class="column" style="background-color: lightblue">
                 <h4>Адреса</h4>
                 <hr>
                 <p>Україна, Львівська обл.<br>м.Львів, вул.Кульпарківська 117<br>
                     E-mail: bubniyo@gmail.com</p>
             </div>
-            <div class="column bg-light">
+            <div class="column" style="background-color: lightblue">
                 <h4>Телефон</h4>
                 <hr>
                 <p>Тел.факс +38 (05743) 5-44-74 <br>
@@ -32,7 +32,7 @@
                     (050) 405-97-25, (097) 839-73-79, (097) 849-42-57,
                 </p>
             </div>
-            <div class="column bg-light">
+            <div class="column" style="background-color: lightblue">
                 <h4>Графік роботи</h4>
                 <hr>
                 <p><b>Працюємо Пн-Пт</b>: 10:00 до 18:00. <br>

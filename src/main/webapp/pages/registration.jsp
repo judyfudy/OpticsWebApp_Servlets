@@ -27,6 +27,7 @@
         <input type="text" placeholder="Ім'я" name="firstName" id="firstName" required>
         <input type="text" placeholder="Прізвище" name="lastName" id="lastName" required>
         <input type="text" placeholder="Ім'я користувача" name="username" id="username" required>
+        <input type="text" placeholder="Почта" name="email" id="email" required>
         <input type="password" placeholder="Пароль" name="password" id="password" required>
         <input type="password" placeholder="Введіть пароль ще раз" name="passwordConfirm" id="passwordConfirm" required>
         <hr>
@@ -45,6 +46,7 @@
         var lastName = document.getElementById("lastName").value;
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
+        var email = document.getElementById("email").value;
         var passwordConfirm = document.getElementById("passwordConfirm").value;
 
         if (password !== passwordConfirm) {
@@ -61,7 +63,8 @@
                 firstName: firstName,
                 lastName: lastName,
                 username: username,
-                password: password
+                password: password,
+                email: email
             }
         }).done(function (response) {
             console.log(response);
