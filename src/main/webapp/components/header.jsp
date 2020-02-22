@@ -40,8 +40,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet"/>
+    <link type="text/css" rel="stylesheet" href="<c:url value=" /css/header.css"/>">
 </head>
-<body>
+<body onload="startTime()">
 <nav class="navbar navbar-expand-lg navbar-light" id="myTopnav" style="background-color: lightblue">
     <a class="navbar-brand" href="<c:url value="/"/>"><b>ОПТИКА</b></a>
 
@@ -64,10 +65,12 @@
             <li class="nav-item">
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><b>bubniyo@gmail.com</b></a>
             </li>
-            <li class="nav-item">
-                <a href="https://instagram.com/dan4oooos"><i class="fa fa-instagram"
-                                                             style="margin-left: 700px; margin-top: 12px"></i></a>
-                <a href="https://www.facebook.com/bubnsy"><i class="fa fa-facebook" style="margin-left: 5px;"></i></a>
+            <li class="nav-item" style="margin-left: 50px; margin-top: 8px">
+                <a href="https://instagram.com/dan4oooos"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.facebook.com/bubnsy"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li style="margin-left: 50px; margin-top: 8px">
+                <p id="txt" style="color: white"></p>
             </li>
         </ul>
         <div class="navbar-nav ml-auto">
@@ -90,6 +93,27 @@
         </div>
     </div>
 </nav>
+
+<script type="text/javascript">
+    function startTime() {
+        var tm = new Date();
+        var h = tm.getHours();
+        var m = tm.getMinutes();
+        var s = tm.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+        t = setTimeout('startTime()', 500);
+    }
+
+    function checkTime(i) {
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+    }
+</script>
+
 <jsp:include page="/components/footer.jsp"/>
 </body>
 </html>

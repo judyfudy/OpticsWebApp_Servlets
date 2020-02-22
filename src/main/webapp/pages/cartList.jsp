@@ -26,12 +26,16 @@
 <hr>
 
 <c:forEach items="${productList}" var="product">
-    <div class="card mt-5 ml-5 mb-5" style="display: inline-block">
-        <img src="data:image/jpg;base64,${product.photo}" alt="Denim Jeans" width="100%" height="30%">
-        <p>${product.name} ${product.brand} ${product.model}</p>
-        <p class="price">Ціна: ${product.price} грн.</p>
-        <p class="small">Кількість: ${product.quantity}</p>
-        <button onclick="removeFromCart(${product.id})">Забрати з корзини</button>
+    <div class="row" id="cartRow">
+        <div class="column">
+            <div class="card mt-5 ml-5 mb-5">
+                <img src="data:image/jpg;base64,${product.photo}" alt="Denim Jeans" width="100%" height="30%">
+                <p>${product.name} ${product.brand} ${product.model}</p>
+                <p class="price">Ціна: ${product.price} грн.</p>
+                <p class="small">Кількість: ${product.quantity}</p>
+                <button onclick="removeFromCart(${product.id})">Забрати з корзини</button>
+            </div>
+        </div>
     </div>
 </c:forEach>
 <script>

@@ -15,34 +15,25 @@
 <body>
 <jsp:include page="/components/header.jsp"/>
 <h3 align="center" style="margin-top: 10px">Послуги</h3>
-<div class="grid">
-    <div class="container">
-        <img src="<c:url value="/images/consulatation.jfif"/>" alt="Sample photo" style="width: 100%;">
-        <div class="text-block">
-            <h3>Консультація офтальмолога</h3>
-        </div>
-        <div class="overlay">
-            <div class="text"><a href="<c:url value="/poslugi_pages/consultation_text.jsp"/>">Детальніше</a></div>
-        </div>
+<hr>
+
+<div class="row" id="rowrow">
+    <div class="column">
+        <a href="<c:url value="/poslugi_pages/consultation_text.jsp"/>">
+            <img src="<c:url value="/images/consulatation.jfif"/>" alt="Sample photo" style="width: 100%;">
+        </a>
     </div>
-    <div class="container">
-        <img src="<c:url value="/images/girl_test.jfif"/>" alt="Sample photo" style="width: 100%;">
-        <div class="text-block">
-            <h3>Діагностика зору</h3>
-        </div>
-        <div class="overlay">
-            <div class="text"><a href="<c:url value="/poslugi_pages/diagnostic_page.jsp"/>">Детальніше</a></div>
-        </div>
+    <div class="column">
+        <a href="<c:url value="/poslugi_pages/diagnostic_page.jsp"/>">
+            <img src="<c:url value="/images/girl_test.jfif"/>" alt="Sample photo" style="width: 100%;">
+        </a>
     </div>
-    <div class="container">
-        <img src="<c:url value="/images/glasses.jfif"/>" alt="Sample photo" style="width: 100%;">
-        <div class="text-block">
-            <h3>Виготовлення та ремонт окулярів</h3>
-        </div>
-        <div class="overlay">
-            <div class="text"><a href="<c:url value="/poslugi_pages/repair_page.jsp"/>">Детальніше</a></div>
-        </div>
+    <div class="column">
+        <a href="<c:url value="/poslugi_pages/repair_page.jsp"/>">
+            <img src="<c:url value="/images/glasses.jfif"/>" alt="Sample photo" style="width: 100%;">
+        </a>
     </div>
+</div>
 </div>
 </div>
 </body>
